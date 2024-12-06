@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Home Page</title>
+</head>
+<body>
+    <!--navbar section-->
+    <nav>
+    <div class="left-nav">
+        <h2>My Portfolio</h2>
+    </div>
+    <ul class="right-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+    
+    <!-- home ssection-->
+     <section id="home" class="flex s-around sw-80 m-auto">
+        <div class="home-left flex items-center">
+            <div class="home-content">
+                <h6 class="poppins">Hi I'm</h6>
+                <h1 class="t-white">Joseph Juma</h1>
+                <h4 class="poppins">Software Developer/Engineer ,  ML Developer</h4>
+                <a href="{% static "" %}" target="_blank">
+                    <button class="btn poppins">Resume</button>
+                </a>
+                <a class="btn live poppins" id="hire me" href="" target="_blank">Let's talk</a>
+            
+
+            </div>
+        </div>
+
+        <div class='home-right flex s-center items-center'>
+            <div class="circle flex s-center items-center" id="mainImage">
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- about section-->
+    <section id="about">
+        <h1 class="t center my-2 t-white f-2">About</h1>
+        <div class="about-container flex s-around">
+            <div class="about-left flex s-center items-center">
+            </div>
+
+        <div class="about-right flex">
+            <div class="about-content">
+                <h1 class="t-white m-b-1 poppins">Joseph Juma</h1>
+                <p class="t-white poppins">Software and ML Developer.</p>
+                <a href="btn" id="hire me" href="">Hire me.</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- skills section-->
+     <section id="skills">
+        <h1 class="t center my-2 t-white f-2">Skills</h1>
+        <div class="services-container flex s-around h-50">
+            <div class="skills-left flex s-center items-center">
+                </div>
+                <div class="skills-container">
+                    <div class="python bar p-relative"><span class="bar-content left t-white">Python</span>
+                    <span class="bar-content right-skills t-white">90%</span></div>
+
+                    <div class="html bar p-relative"><span class="bar-content left t-white">HTML</span>
+                    <span class="bar-content right-skills t-white">90%</span></div>
+
+                    <div class="css bar p-relative"><span class="bar-content left t-white">CSS</span>
+                    <span class="bar-content right-skills t-white">80%</span></div>
+
+                    <div class="js bar p-relative"><span class="bar-content left t-white">JAVASCRIPT</span>
+                    <span class="bar-content right-skills t-white">80%</span></div>
+
+                    <div class="sql bar p-relative"><span class="bar-content left t-white">MYSQL</span>
+                    <span class="bar-content right-skills t-white">80%</span></div>
+
+                    <div class="php bar p-relative"><span class="bar-content left t-white">PHP</span>
+                    <span class="bar-content right-skills t-white">80%</span></div>
+
+                    <div class="django bar p-relative"><span class="bar-content left t-white">DJANGO</span>
+                    <span class="bar-content right-skills t-white">80%</span></div>
+
+                    <div class="laravel bar p-relative"><span class="bar-content left t-white">Laravel</span>
+                    <span class="bar-content right-skills t-white">80%</span></div>
+
+                    <div class="mongodb bar p-relative"><span class="bar-content left t-white">MONGODB</span>
+                    <span class="bar-content right-skills t-white">80%</span></div>
+                </div>
+
+            </div>
+        </div>
+        </section>
+
+         <!-- projects section-->
+          <section id="projects">
+            <h1 class="t center my-2 t-white f-2">Projects</h1>
+            <div class="projects-container f-col s-center">
+                <div class="project-item left flex s-center items-center">
+                    <h1 class="t-white poppins">My Projects</h1>
+                    <p class="t-white">1. Surgical Assessment risk model</p>
+                    <p class="t-white">2. Stock Price Prediction model</p>
+                    <p class="t-white">3. Inventory Management System</p>
+                    
+                </div>
+
+            </div>
+
+
+    <!--Contact me-->
+    <section id="contact">
+        <h1 class="t center my-2 t-white f-2">Contact Me</h1>
+        <div class="contact-container flex s-around items=center">
+            <div class-" form" id="contactform">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="name form-div">
+                        <input type="text" name="name" id="name" class="poppins" placeholder="Enter your name">
+                    </div>
+                    <div class="email form-div">
+                        <input type="email" name="email" id="" class="poppins" placeholder="Enter your email">
+                    </div>
+                    <div class="phone form-div">
+                        <input type="phone" name="phone" id="" class="poppins" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="textarea form-div">
+                        <textarea type="content"  id="textarea" cols='30' rows='10' class="poppins" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn poppins" id="submit">Send</button>
+                </form>
+
+            </div>
+        </section>
+
+
+         <!-- footer-->
+         <footer id="footer">
+            <ul class="flex s-center w-80 m-auto my-2 res">
+                <li><a href="#home" class="poppins">Home</a></li>
+                <li><a href="#about" class="poppins">About</a></li>
+                <li><a href="#skills" class="poppins">Skills</a></li>
+                <li><a href="#projects" class="poppins">Projects</a></li>
+                <li><a href="#contact" class="poppins">Contact</a></li>
+
+            </ul>
+
+            <ul class=" flex s-center w-80  font-awesome">
+                <a href="" target="_blank">
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                </a>
+                <a href="" target="_blank">
+                    <li><i class="fa-brands fa-Instagram"></i></li>
+                </a>
+
+                <a href="" target="_blank">
+                    <li><i class="fa-brands fa-github"></i></li>
+                </a>
+                
+            </ul>
+            <p class="t-center my-2 poppins">&copy; All rights reserved <span class="cpy-white poppins">Error By Night</span></p>
+
+            
+    
+        </footer>
+            
+</body>
+</html>

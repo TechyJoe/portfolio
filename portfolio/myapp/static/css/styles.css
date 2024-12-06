@@ -1,0 +1,316 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a,
+button,
+input,
+textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #4a148c, #7b1fa2);
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .left-nav h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffd700;
+    display: flex;
+    align-items: center;
+}
+
+nav .left-nav h2::before {
+    content: url('https://img.icons8.com/color/48/000000/portfolio.png');
+    /* Logo for Portfolio */
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Sections */
+section {
+    padding: 7rem 2rem;
+    text-align: center;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    height: 100vh;
+    background: url("{% static 'images/bg.jpg' %}") no-repeat center center/cover;
+    color: #fff;
+}
+
+.home-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffd700;
+}
+
+.home-content h4 {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    color: #e0e0e0;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    max-width: 600px;
+}
+
+.home-content .btn {
+    background: linear-gradient(45deg, #ffd700, #ba68c8);
+    color: #121212;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 1rem 0.5rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.home-content .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* About Section */
+#about {
+    background: #4a148c;
+    padding: 8rem 2rem;
+    color: #e0e0e0;
+}
+
+#about img {
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+#about .about-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ffd700;
+}
+
+#about .about-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+#about .btn {
+    background: linear-gradient(45deg, #ffd700, #ba68c8);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    color: #121212;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#about .btn:hover {
+    background: linear-gradient(45deg, #ba68c8, #ffd700);
+}
+
+/* Skills Section */
+#skills {
+    background: #6a1b9a;
+    padding: 6rem 2rem;
+}
+
+.skills-container .bar {
+    background: #4527a0;
+    margin: 1rem 0;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.skills-container .bar .bar-content {
+    position: absolute;
+    padding: 0 10px;
+    height: 100%;
+}
+
+.bar .left {
+    left: 0;
+    font-size: 1rem;
+}
+
+.bar .right-skills {
+    right: 0;
+    font-size: 1rem;
+}
+
+.bar .python {
+    width: 90%;
+    background: linear-gradient(45deg, #8e24aa, #ffd700);
+}
+
+/* Other skill bars */
+.bar .html,
+.bar .css,
+.bar .js,
+.bar .sql,
+.bar .php,
+.bar .django,
+.bar .laravel,
+.bar .mongodb {
+    width: 80%;
+    background: linear-gradient(45deg, #7e57c2, #ffd700);
+}
+
+/* Contact Section */
+#contact {
+    background: #311b92;
+    padding: 6rem 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+#contact form {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: none;
+    background: #4527a0;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+    color: #c7c7c7;
+}
+
+#contact form button {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(45deg, #ffd700, #ba68c8);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #311b92;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background: linear-gradient(45deg, #ba68c8, #ffd700);
+    color: #ffffff;
+}
+
+/* Footer */
+#footer {
+    background-color: #311b92;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    margin-top: 5rem;
+}
+
+#footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#footer ul li i {
+    font-size: 1.8rem;
+    color: #ffd700;
+    transition: transform 0.3s ease;
+}
+
+#footer ul li i:hover {
+    transform: scale(1.2);
+    color: #ba68c8;
+}
+
+#footer p {
+    color: #ccc;
+}
